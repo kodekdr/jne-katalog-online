@@ -31,12 +31,18 @@ class LoginController extends CI_Controller
 
         if ($loginVerify) {
             $this->session->set_userdata((array)$loginVerify);
-            redirect('home');
+            redirect('admin/dashboard');
         } else {
             $this->session->set_flashdata([
                 'error' => 'akun tidak ditemukan'
             ]);
             redirect('login');
         }
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }

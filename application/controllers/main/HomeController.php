@@ -7,7 +7,7 @@ class HomeController extends CI_Controller
     {
         parent::__construct();
         $this->load->library('session');
-        $this->load->helper(['url', 'filter_products_component']);
+        $this->load->helper(['url', 'filter_products_component', 'search_products_component']);
         $this->load->model(['ProductModel', 'CategoryModel']);
     }
 

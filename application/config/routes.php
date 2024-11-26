@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'auth/LoginController/index';
+$route['logout'] = 'auth/LoginController/logout';
 $route['login-process'] = 'auth/LoginController/loginProcess';
 
 $route['home'] = 'main/HomeController/index';
@@ -61,3 +62,6 @@ $route['home/(:num)'] = 'main/HomeController/index/$1';
 $route['product/details-product/(:num)'] = 'main/products/DetailsProductController/index/$1';
 
 $route['seller/(:num)'] = 'main/seller/SellerController/index/$1';
+$route['seller/(:num)/(:num)'] = 'main/seller/SellerController/index/$1/$1';
+
+$route['admin/dashboard'] = 'admin/DashboardController/index';

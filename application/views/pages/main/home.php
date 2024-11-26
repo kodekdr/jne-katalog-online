@@ -1,21 +1,11 @@
 <h1>Halaman home</h1>
-
-<form action="home" method="get">
+<a href="<?= base_url('login') ?>">login</a>
+<!-- <form action="home" method="get">
     <input type="text" placeholder="search" name="keyword">
     <button>submit</button>
-</form>
-
-<!-- <form action="home" method="get">
-    <?php foreach ($categories as $category) : ?>
-        <label for="">
-            <input type="checkbox" name="categories[]" value="<?= $category['nama_kategori'] ?>"
-                <?= in_array($category['nama_kategori'], (array) $this->input->get('categories')) ? 'checked' : '' ?>>
-            <?= $category['nama_kategori'] ?>
-        </label>
-    <?php endforeach ?>
-    <button type="submit">Filter</button>
 </form> -->
 
+<?php search_products_component('home') ?>
 <?php filter_products_component('home') ?>
 
 <a href="<?= base_url('home') ?>">

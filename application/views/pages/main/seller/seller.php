@@ -1,13 +1,15 @@
 <h1>Halaman Seller</h1>
+<a href="<?= base_url('home') ?>">Homepage</a>
 
-<form action="home" method="get">
+<!-- <form action="home" method="get">
     <input type="text" placeholder="search" name="keyword">
     <button>submit</button>
-</form>
+</form> -->
 
+<?php search_products_component('seller/' . $this->uri->segment(2)) ?>
 <?php filter_products_component('seller/' . $this->uri->segment(2)) ?>
 
-<a href="<?= base_url('home') ?>">
+<a href="<?= base_url('seller/' . $this->uri->segment(2)) ?>">
     <button>reset filter</button>
 </a>
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -30,4 +32,4 @@
     <?php endforeach ?>
 </div>
 
-<!-- <?= $pagination ?> -->
+<?= $pagination ?>
